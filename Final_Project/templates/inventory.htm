@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="static/stylez.css" rel="stylesheet" type="text/css">
+        <title>Document</title>
+    </head>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+        .TitleWords{
+            font-size: 24pt;
+        }
+        thead{
+            background-color: aqua;
+        }
+        .content{
+            background-color: white;
+        }
+    </style>
+    <body>
+        <p class="TitleWords"><b>Inventory Page</b></p>
+        <a href="http://127.0.0.1:5000/home">Return to Our Home Page</a>
+        <a href="http://127.0.0.1:5000/add">To Add an Item to this Inventory</a>
+        <p>
+            Listed below is our current inventory of drinks. We have three different 'types' of flavors: regular,
+            healthy, and super energizing. These all vary in price (as seen below) and you can also see which ones
+            we have in stock.
+        </p>
+        <table border = 2>
+            <thead>
+                <td>Item ID</td>
+                <td>Name</td>
+                <td>Type</td>
+                <td>Price</td>
+                <td>Amount</td>
+            </thead>
+            {% for row in rows %}
+            <tr>
+                <td class="content">{{row["item_id"]}}</td>
+                <td class="content">{{row["name"]}}</td>
+                <td class="content">{{row["type"]}}</td>
+                <td class="content">{{row["price"]}}</td>
+                <td class="content">{{row["amount"]}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

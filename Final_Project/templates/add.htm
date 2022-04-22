@@ -1,0 +1,37 @@
+
+<html lang="en">
+<style>
+    body{
+        background-color: aquamarine;
+    }
+    .TitleWords{
+        font-size: 24pt;
+    }
+</style>
+<body>
+
+    <link rel="stylesheet" href="{{url_for('.static', filename='stylez.css')}}">
+    <form action = "{{ url_for('addrec') }}" method = "POST">
+        <p class="TitleWords"><b>Addition Page</b></p>
+        <a href="http://127.0.0.1:5000/home">Return to Our Home Page</a>
+        <a href="http://127.0.0.1:5000/inventory">View our Current Inventory</a>
+
+        <p><b>Item ID</b></p>
+        <p><input type="text" name="item_id"/></p>
+
+        <p><b>Name</b></p>
+        <p><input type="text" name="nm"/></p>
+
+        <p><b>Type</b></p>
+        <p><input type="text" name="item_type"/></p>
+
+        <p><b>Price</b></p>
+        <p><input type="text" name="price"/></p>
+
+        <p><b>Amount (in stock)</b></p>
+        <p><input type="text" name="amt"/></p>
+
+        <p><input type="submit" value="Submit" class="btn btn-primary"/></p>
+    </form>
+</body>
+</html>
