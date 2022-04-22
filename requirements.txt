@@ -1,0 +1,5 @@
+# Required Files
+Flask=2.1.1
+Flask_Bootstrap==3.3.7.1
+python3==3.8.10
+pip==20.0.2
